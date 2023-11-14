@@ -44,7 +44,7 @@ db.once('open', () => {
     });
     
     // Posting and storing the messages from users
-    app.post('/api/messages', async (req, res) => {
+    app.post('/api/message', async (req, res) => {
         try {
             const newMessage = new Message(req.body);
             await newMessage.save();
